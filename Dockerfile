@@ -8,6 +8,6 @@ COPY kick-start.sh /opt/kick-start
 RUN chmod -v +x /opt/kick-start
 
 # Install packages
-RUN yum -y install java git
+RUN yum -y install java git && yum clean all
 
 CMD ["/opt/kick-start"]
